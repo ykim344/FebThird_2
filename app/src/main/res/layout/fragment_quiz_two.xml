@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yeonjun.febthird_2.QuizTwo">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="submit"
+        android:id="@+id/submitQ1"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:layout_width="15442dp"
+        android:layout_height="278dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal|top"
+        android:src="#bb6363" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp" />
+
+</FrameLayout>
