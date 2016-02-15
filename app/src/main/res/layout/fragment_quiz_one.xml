@@ -20,15 +20,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_gravity="center" />
+        android:id="@+id/quizOneAns"
+        android:layout_gravity="center"
+        android:hint = "input answer here"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="submit"
-        android:id="@+id/submitQ1"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="60dp"
-        android:textSize="40dp" />
 </FrameLayout>
