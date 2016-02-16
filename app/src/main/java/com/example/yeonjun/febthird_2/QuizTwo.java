@@ -7,7 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.EditText;
 
 
 /**
@@ -18,7 +18,7 @@ import android.view.ViewGroup;
  * Use the {@link QuizTwo#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QuizTwo extends Fragment implements FragInterface{
+public class QuizTwo extends Fragment {
 
 
     @Override
@@ -29,7 +29,5 @@ public class QuizTwo extends Fragment implements FragInterface{
     }
 
 
-    public String getTextVal(){
-        return "";
-    }
+
 }

@@ -5,5 +5,5 @@ package com.example.yeonjun.febthird_2;
  */
 public interface FragInterface {
 
-    public String getTextVal();
+    public void respondtoActivity(String value);
 }

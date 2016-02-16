@@ -17,9 +17,16 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/quizTwoAns"
         android:layout_gravity="right|center_vertical"
         android:layout_marginBottom="30dp"
         android:hint = "input answer here"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/quizOneSubmit"
+        android:layout_gravity="center_horizontal|bottom" />
 
 </FrameLayout>

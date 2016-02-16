@@ -17,7 +17,7 @@ import android.view.ViewGroup;
  * Use the {@link DefaultFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DefaultFragment extends Fragment implements FragInterface{
+public class DefaultFragment extends Fragment{
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,8 +25,5 @@ public class DefaultFragment extends Fragment implements FragInterface{
         return inflater.inflate(R.layout.fragment_default, container, false);
     }
 
-    public String getTextVal(){
-        return "";
-    }
 
 }

@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import layout.QuizOne;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragInterface{
 
     public boolean quizOneRight=false;
     public boolean quizTwoRight=false;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showQuizOne(View view){
-       // EditText myTextField = (EditText)findViewById(R.id.textField);
+
 
 
         Fragment f = new QuizOne();
@@ -32,15 +32,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void submitButton(View view){
+
+
+
+    @Override
+    public void respondtoActivity(String value) {
         Fragment currentFragment = this.getFragmentManager().findFragmentById(R.id.quizlocation);
 
-        if(currentFragment instanceof DefaultFragment){
-            showQuizOne(view);
-        }
 
-        else if(currentFragment instanceof QuizOne){
-            Fragment f = new QuizTwo();
+
+        if(currentFragment instanceof QuizOne){
+
+            if(value.equals("2"))
+                quizOneRight = true;
+            else
+                quizOneRight = false;
+
+            Fragment f = (Fragment)new QuizTwo();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.quizlocation,f);
@@ -48,7 +56,12 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(currentFragment instanceof QuizTwo){
             //change activity to result page
+            if(value.equals("tiger"))
+                quizTwoRight = true;
+            else
+                quizTwoRight = false;
         }
+
 
     }
 }
