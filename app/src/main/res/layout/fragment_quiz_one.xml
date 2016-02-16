@@ -29,7 +29,6 @@
         android:layout_height="wrap_content"
         android:text="submit"
         android:id="@+id/quizOneSubmit"
-        android:layout_gravity="center_horizontal|bottom"
-        android:onClick="oneClick" />
+        android:layout_gravity="center_horizontal|bottom" />
 
 </FrameLayout>

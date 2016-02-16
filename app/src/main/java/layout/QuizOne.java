@@ -30,12 +30,22 @@ public class QuizOne extends Fragment  {
         super.onActivityCreated(savedInstanceState);
         comm = (FragInterface)getActivity();
         text = (EditText) getActivity().findViewById(R.id.quizOneAns);
-        button = (Button)getActivity().findViewById(R.id.quizOneSubmit);
+        //button = (Button)getActivity().findViewById(R.id.quizOneSubmit);
         //button.setOnClickListener(this);
+        final Button button = (Button) getActivity().findViewById(R.id.quizOneSubmit);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                comm.respondtoActivity(text.getText().toString());
+            }
+        });
+
+
+
     }
 
-    public void oneClick(View v) {
-        comm.respondtoActivity(text.getText().toString());
-    }
+//    public void oneClick(View v) {
+//        comm.respondtoActivity(text.getText().toString());
+//    }
 
 }
