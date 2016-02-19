@@ -1,5 +1,6 @@
 package com.example.yeonjun.febthird_2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -12,8 +13,8 @@ import layout.QuizOne;
 
 public class MainActivity extends AppCompatActivity implements FragInterface{
 
-    public boolean quizOneRight=false;
-    public boolean quizTwoRight=false;
+    public static boolean quizOneRight=false;
+    public static boolean quizTwoRight=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements FragInterface{
                 quizTwoRight = true;
             else
                 quizTwoRight = false;
+
+            Intent i = new Intent(this, ResultActivity.class);
+            startActivity(i);
         }
 
 

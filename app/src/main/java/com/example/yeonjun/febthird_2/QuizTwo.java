@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -21,6 +22,10 @@ import android.widget.EditText;
 public class QuizTwo extends Fragment {
 
 
+    FragInterface comm;
+    EditText text;
+    Button button;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,5 +34,22 @@ public class QuizTwo extends Fragment {
     }
 
 
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+        comm = (FragInterface)getActivity();
+        text = (EditText) getActivity().findViewById(R.id.quizTwoAns);
+
+
+        final Button button = (Button) getActivity().findViewById(R.id.quizTwoSubmit);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                comm.respondtoActivity(text.getText().toString());
+            }
+        });
+
+
+
+    }
 
 }
