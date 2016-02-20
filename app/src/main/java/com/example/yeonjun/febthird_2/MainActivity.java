@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity implements FragInterface{
         setContentView(R.layout.activity_main);
     }
 
+
+    //respond to start button
     public void showQuizOne(View view){
-
-
 
         Fragment f = new QuizOne();
         FragmentManager fm = getFragmentManager();
@@ -37,18 +37,17 @@ public class MainActivity extends AppCompatActivity implements FragInterface{
 
 
     @Override
+    //respond to submit button
     public void respondtoActivity(String value) {
         Fragment currentFragment = this.getFragmentManager().findFragmentById(R.id.quizlocation);
 
-
-
         if(currentFragment instanceof QuizOne){
-
+            //validate answer for quiz one
             if(value.equals("2"))
                 quizOneRight = true;
             else
                 quizOneRight = false;
-
+            // move to a different fragments after first quiz
             Fragment f = (Fragment)new QuizTwo();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
@@ -56,12 +55,12 @@ public class MainActivity extends AppCompatActivity implements FragInterface{
             ft.commit();
         }
         else if(currentFragment instanceof QuizTwo){
-            //change activity to result page
+            //check rather it clicked the right radio button
             if(value.equals("tiger"))
                 quizTwoRight = true;
             else
                 quizTwoRight = false;
-
+            //change activity to result page
             Intent i = new Intent(this, ResultActivity.class);
             startActivity(i);
         }

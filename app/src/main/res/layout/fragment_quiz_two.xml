@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yeonjun.febthird_2.QuizTwo">
+    tools:context="com.example.yeonjun.febthird_2.QuizTwo"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -14,19 +15,35 @@
         android:layout_gravity="center_horizontal|top"
         android:src="@drawable/tigerpicq" />
 
+
+    <RadioGroup
+        android:id="@+id/radio2ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiger"
+        android:id="@+id/tigerbutton"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lion"
+        android:id="@+id/lionbutton"
+        android:checked="false" />
+
+    </RadioGroup>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="submit"
         android:id="@+id/quizTwoSubmit"
         android:layout_gravity="center_horizontal|bottom" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/quizTwoAns"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="60dp"
-        android:hint = "input answer here" />
-
-</FrameLayout>
+</LinearLayout>
